@@ -12,6 +12,7 @@ Welcome to the Trivia Quiz Web App! This project is a simple interactive quiz th
 - [Customization](#customization)
 - [Contributing](#contributing)
 - [License](#license)
+- [Contact](#contact)
 
 ## Features
 - Multiple-choice trivia questions in various categories.
@@ -50,6 +51,10 @@ You can customize the trivia quiz by adding or modifying questions. Open the `sc
  choices: ["choice1", "choice2", "choice3", "choice4"],
  correctAnswer: 0 // Replace with the index of the correct choice
 },
+```
+## Contributing
+Contributions to this project are welcome. If you have any ideas for improvements, new features, or bug fixes, feel free to open an issue or submit a pull request.
 
+## License
 
 Please make sure to replace the `your-username` placeholder with your actual GitHub username if you plan to host the project on GitHub. Additionally, you can add a screenshot of your quiz interface or any other relevant images to the repository and update the `![Screenshot](screenshot.png)` line with the correct image path.
