@@ -58,3 +58,6 @@ Contributions to this project are welcome. If you have any ideas for improvement
 ## License
 
 Please make sure to replace the `your-username` placeholder with your actual GitHub username if you plan to host the project on GitHub. Additionally, you can add a screenshot of your quiz interface or any other relevant images to the repository and update the `![Screenshot](screenshot.png)` line with the correct image path.
+
+## Contact
+Do not Contact me lol
