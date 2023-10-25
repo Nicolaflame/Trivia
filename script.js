@@ -262,18 +262,44 @@ const questionElement = document.getElementById("question");
 const choicesElement = document.getElementById("choices");
 const resultElement = document.getElementById("result");
 
-function loadQuestion() {
-  const current = questions[currentQuestion];
-  questionElement.textContent = current.question;
-  choicesElement.innerHTML = "";
+// ... (previous code)
 
-  for (let i = 0; i < current.choices.length; i++) {
-    const choice = document.createElement("button");
-    choice.textContent = current.choices[i];
-    choice.addEventListener("click", checkAnswer);
-    choicesElement.appendChild(choice);
+let currentQuestionIndex = 0;
+
+// Function to shuffle the questions array
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
   }
 }
+
+// Shuffle the questions array initially
+shuffleArray(questions);
+
+function loadQuestion() {
+  // Check if all questions have been asked
+  if (currentQuestionIndex === questions.length) {
+    // Optionally, you can provide a "Quiz Complete" message
+    displayResult();
+  } else {
+    const current = questions[currentQuestionIndex];
+    questionElement.textContent = current.question;
+    choicesElement.innerHTML = "";
+
+    for (let i = 0; i < current.choices.length; i++) {
+      const choice = document.createElement("button");
+      choice.textContent = current.choices[i];
+      choice.addEventListener("click", checkAnswer);
+      choicesElement.appendChild(choice);
+    }
+  }
+
+  // Increment the current question index
+  currentQuestionIndex++;
+}
+
+// ... (remaining code)
 
 function checkAnswer(event) {
   const userChoice = event.target.textContent;
